@@ -1,6 +1,7 @@
 ---
 title: "Agent API quickstart"
 description: "Bind an agent to a user's AIR Account from your backend, then mint short-lived agent JWTs to list and verify credentials and start a merchant checkout."
+sidebarTitle: "Agent API integration"
 ---
 
 The Agent APIs let your backend act for a signed-in user through a bound agent. You bind the agent once while the user has an AIR Kit session. After that, the agent mints a 15-minute JWT for each operation and uses it to list or verify the user's credentials. If the agent's key includes `commerce.checkout`, the agent can also mint a token for a supported merchant checkout.

@@ -1,6 +1,6 @@
 {
   "name": "AIR Kit",
-  "description": "AIR Kit — portable credentials, cross-platform loyalty, and privacy-preserving identity for enterprise partners and developers. Build on Moca Chain.",
+  "description": "AIR Kit \u2014 portable credentials, cross-platform loyalty, and privacy-preserving identity for enterprise partners and developers. Build on Moca Chain.",
   "api": {
     "playground": {
       "proxy": false
@@ -87,11 +87,11 @@
       },
       {
         "tab": "Get Started",
-        "groups": [
+        "pages": [
+          "get-started/build-with-your-agent",
           {
             "group": "Overview",
             "pages": [
-              "get-started/build-with-your-agent",
               "get-started/what-is-airkit",
               "get-started/when-to-use-airkit"
             ]
@@ -196,35 +196,101 @@
           {
             "item": "AIR Identity",
             "icon": "id-card",
-            "groups": [
+            "pages": [
+              "products/identity/integrating-using-ai",
               {
                 "group": "Overview",
                 "pages": [
-                  "products/identity/index",
-                  "products/identity/integrating-using-ai",
-                  "products/identity/credentials-flow"
-                ]
-              },
-              {
-                "group": "Using credentials",
-                "pages": [
-                  "products/identity/credential-formats",
-                  "products/identity/schema-overview",
-                  "products/identity/issuing-credentials",
-                  "products/identity/schema-creation",
-                  "products/identity/backend-hosting",
-                  "products/identity/revocation",
-                  "products/identity/schema-management",
-                  "products/identity/verify",
-                  "products/identity/what-data",
-                  "products/identity/verify-sd-jwt",
-                  "products/identity/iden3-credentials"
-                ]
-              },
-              {
-                "group": "Use cases",
-                "pages": [
+                  {
+                    "group": "Key concepts",
+                    "expanded": true,
+                    "pages": [
+                      "products/identity/credentials-flow",
+                      "products/identity/schema-overview"
+                    ]
+                  },
                   "products/identity/use-cases"
+                ]
+              },
+              {
+                "group": "Working with Identity",
+                "pages": [
+                  {
+                    "group": "Issuing credentials",
+                    "root": "products/identity/issuing-credentials",
+                    "expanded": false,
+                    "pages": [
+                      "products/identity/schema-creation",
+                      "products/identity/backend-hosting",
+                      "products/identity/revocation",
+                      "products/identity/schema-management"
+                    ]
+                  },
+                  {
+                    "group": "Verifying credentials",
+                    "root": "products/identity/verify",
+                    "expanded": false,
+                    "pages": [
+                      "products/identity/what-data",
+                      "products/identity/verify-sd-jwt",
+                      {
+                        "group": "Other ways to verify",
+                        "root": "products/identity/credential-formats",
+                        "expanded": false,
+                        "pages": [
+                          "products/identity/iden3-credentials"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Beyond Identity",
+                "pages": [
+                  "products/identity/beyond-identity"
+                ]
+              }
+            ]
+          },
+          {
+            "item": "AIR Agent",
+            "icon": "robot",
+            "pages": [
+              "products/agents/integrating-using-ai",
+              {
+                "group": "Overview",
+                "pages": [
+                  {
+                    "group": "Key concepts",
+                    "expanded": true,
+                    "pages": [
+                      "products/agents/how-it-works",
+                      "products/agents/delegation-and-consent"
+                    ]
+                  },
+                  "products/agents/use-cases"
+                ]
+              },
+              {
+                "group": "Working with Agents",
+                "pages": [
+                  "products/agents/integration-options",
+                  {
+                    "group": "Agent API integration",
+                    "root": "products/agents/partner-agent-api",
+                    "expanded": false,
+                    "pages": [
+                      "api-reference/agents/introduction"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Beyond Agents",
+                "pages": [
+                  "products/agents/beyond-agents",
+                  "products/agents/offers-for-agents"
                 ]
               }
             ]
@@ -232,27 +298,51 @@
           {
             "item": "AIR Money",
             "icon": "wallet",
-            "groups": [
+            "pages": [
+              "products/money/integrating-using-ai",
               {
                 "group": "Overview",
                 "pages": [
-                  "products/money/index",
-                  "products/money/integrating-using-ai",
-                  "products/money/how-it-works"
+                  {
+                    "group": "Key concepts",
+                    "expanded": true,
+                    "pages": [
+                      "products/money/how-it-works",
+                      "products/money/smart-account",
+                      "products/money/supported-chains"
+                    ]
+                  },
+                  "products/money/use-cases"
                 ]
               },
               {
-                "group": "Guides",
+                "group": "Working with Money",
                 "pages": [
-                  "products/money/smart-account",
-                  "products/money/provider-functions",
-                  "products/money/wagmi",
-                  "products/money/supported-chains",
-                  "products/money/paymaster",
-                  "products/money/builtin-ui",
-                  "products/money/session-keys",
-                  "products/money/advanced-functions",
-                  "products/money/wagmi-integration"
+                  {
+                    "group": "Accounts and transactions",
+                    "root": "products/money/provider-functions",
+                    "expanded": false,
+                    "pages": [
+                      "products/money/paymaster",
+                      "products/money/wagmi",
+                      "products/money/wagmi-integration"
+                    ]
+                  },
+                  {
+                    "group": "Advanced wallet flows",
+                    "expanded": false,
+                    "pages": [
+                      "products/money/builtin-ui",
+                      "products/money/session-keys",
+                      "products/money/advanced-functions"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Beyond Money",
+                "pages": [
+                  "products/money/beyond-money"
                 ]
               }
             ]
@@ -260,56 +350,39 @@
           {
             "item": "AIR Loyalty",
             "icon": "gift",
-            "groups": [
+            "pages": [
+              "products/loyalty/integrating-using-ai",
               {
                 "group": "Overview",
                 "pages": [
-                  "products/loyalty/index",
-                  "products/loyalty/integrating-using-ai",
-                  "products/loyalty/how-it-works"
-                ]
-              },
-              {
-                "group": "Guides",
-                "pages": [
-                  "products/loyalty/developers",
-                  "products/loyalty/loyalty-points-issuance"
-                ]
-              },
-              {
-                "group": "Use cases",
-                "pages": [
+                  {
+                    "group": "Key concepts",
+                    "expanded": true,
+                    "pages": [
+                      "products/loyalty/how-it-works"
+                    ]
+                  },
                   "products/loyalty/use-cases"
                 ]
-              }
-            ]
-          },
-          {
-            "item": "AIR Agents",
-            "icon": "robot",
-            "groups": [
+              },
               {
-                "group": "Overview",
+                "group": "Working with Loyalty",
                 "pages": [
-                  "products/agents/index",
-                  "products/agents/integrating-using-ai",
-                  "products/agents/how-it-works"
+                  {
+                    "group": "Issuing and verifying loyalty",
+                    "root": "products/loyalty/developers",
+                    "expanded": false,
+                    "pages": [
+                      "products/loyalty/loyalty-points-issuance"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "Guides",
+                "group": "Beyond Loyalty",
                 "pages": [
-                  "products/agents/integration-options",
-                  "products/agents/partner-agent-api",
-                  "products/agents/delegation-and-consent",
-                  "api-reference/agents/introduction"
-                ]
-              },
-              {
-                "group": "Use cases",
-                "pages": [
-                  "products/agents/use-cases",
-                  "products/agents/offers-for-agents"
+                  "products/loyalty/business",
+                  "products/loyalty/beyond-loyalty"
                 ]
               }
             ]
@@ -318,11 +391,11 @@
       },
       {
         "tab": "Solutions",
-        "groups": [
+        "pages": [
+          "solutions/integrating-using-ai",
           {
             "group": "Overview",
             "pages": [
-              "solutions/integrating-using-ai",
               "solutions/index",
               "solutions/partner-economics",
               "solutions/compliance-faq"
@@ -444,9 +517,7 @@
             "group": "REST API",
             "pages": [
               "api-reference/introduction",
-              "api-reference/issuance-api",
-              "api-reference/catalog/browse-schemas",
-              "api-reference/catalog/schema-detail"
+              "api-reference/issuance-api"
             ]
           },
           {
@@ -485,17 +556,27 @@
           {
             "group": "Troubleshooting",
             "pages": [
-              "help/common-errors",
-              "help/sdk-issues",
-              "help/credential-issues",
-              "help/flutter-troubleshooting"
+              "help/error-codes",
+              "help/common-issues",
+              {
+                "group": "SDK",
+                "pages": [
+                  "help/sdk-web",
+                  "help/sdk-flutter"
+                ]
+              },
+              "help/identity-credential"
             ]
           },
           {
-            "group": "Resources",
+            "group": "FAQ",
             "pages": [
-              "help/faq",
-              "help/glossary",
+              "help/faq"
+            ]
+          },
+          {
+            "group": "Status",
+            "pages": [
               "help/status"
             ]
           }
@@ -1106,19 +1187,19 @@
     },
     {
       "source": "/airkit/troubleshooting/common-errors",
-      "destination": "/help/common-errors"
+      "destination": "/help/error-codes"
     },
     {
       "source": "/airkit/troubleshooting/sdk-issues",
-      "destination": "/help/sdk-issues"
+      "destination": "/help/sdk-web"
     },
     {
       "source": "/airkit/troubleshooting/credential-issues",
-      "destination": "/help/credential-issues"
+      "destination": "/help/identity-credential"
     },
     {
       "source": "/airkit/flutter/troubleshooting",
-      "destination": "/help/flutter-troubleshooting"
+      "destination": "/help/sdk-flutter"
     },
     {
       "source": "/learn/help/faq",
@@ -1235,6 +1316,46 @@
     {
       "source": "/get-started/flutter/ui-components",
       "destination": "/get-started/sdks/flutter/ui-components"
+    },
+    {
+      "source": "/mocachain/help/faq",
+      "destination": "/help/faq"
+    },
+    {
+      "source": "/airkit/troubleshooting/error-codes",
+      "destination": "/help/error-codes"
+    },
+    {
+      "source": "/airkit/troubleshooting/common-issues",
+      "destination": "/help/common-issues"
+    },
+    {
+      "source": "/airkit/troubleshooting/sdk-web",
+      "destination": "/help/sdk-web"
+    },
+    {
+      "source": "/airkit/troubleshooting/sdk-flutter",
+      "destination": "/help/sdk-flutter"
+    },
+    {
+      "source": "/airkit/troubleshooting/identity-credential",
+      "destination": "/help/identity-credential"
+    },
+    {
+      "source": "/help/common-errors",
+      "destination": "/help/error-codes"
+    },
+    {
+      "source": "/help/sdk-issues",
+      "destination": "/help/sdk-web"
+    },
+    {
+      "source": "/help/flutter-troubleshooting",
+      "destination": "/help/sdk-flutter"
+    },
+    {
+      "source": "/help/credential-issues",
+      "destination": "/help/identity-credential"
     }
   ]
 }
