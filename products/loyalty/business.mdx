@@ -1,72 +1,57 @@
 ---
-title: "Loyalty business case"
-sidebarTitle: "Business case"
-description: "Issue portable loyalty tier credentials that travel with your customers across partner brands — no bilateral API agreements required."
+title: "Loyalty as a Business"
+sidebarTitle: "Loyalty as a Business"
+icon: "pen-to-square"
+description: "Explore how a loyalty program can grow from a cost center into a business connecting customers, brands, and merchants."
 ---
 
-Loyalty programs today are siloed — a user's Gold status with one brand is invisible to another. AIR Kit lets you issue **verifiable loyalty credentials** that users carry in their AIR Account and present anywhere in the ecosystem, across brands, apps, and chains.
+<Callout icon="pen-to-square" color="#536974">
+  **Review draft.** Please review the business model and commercial positioning before publication.
+</Callout>
 
-## The Problem
+A loyalty program can do more than fund discounts. With useful rewards and participating partners, it can become a business in its own right: connecting customers with offers, helping merchants reach an audience, and managing a reward economy.
 
-Loyalty programs today are island economies. A customer's Gold status with your brand is invisible to every partner at the other end of their journey. Cross-brand benefits require bilateral API agreements between every pair of participating companies — expensive to build, fragile to maintain, and impossible to scale beyond a handful of partners.
+AIR Loyalty brings together [credentials](/products/loyalty/how-it-works) that prove customer status and [points](/products/loyalty/loyalty-points) for funded rewards. These serve different parts of that business: credentials establish eligibility, while points connect earning to spending and settlement.
 
-The result: $100B in unredeemed loyalty points sitting in silos. Customers who don't bother earning because they can't use what they accumulate.
+## From cost center to business
 
-## What Changes With AIR Kit
+A program run as a cost center is measured mainly by the rewards it pays out and the retention those rewards generate. A loyalty business also asks who benefits from its audience, who funds the offers, and how the program earns revenue from the value it creates.
 
-- **Your customers carry their loyalty tier** — Gold earned with you is presentable at any partner in the Moca ecosystem, with no direct API between you and that partner
-- **No bilateral integrations** — Partners verify the credential, not your API. You issue it once; every verifier accepts it
-- **Zero friction for your existing pipeline** — Credentials issue automatically when your loyalty engine fires its existing events. No new user-facing flow required
-- **Tier upgrades happen instantly** — When a customer reaches Platinum, the old credential is revoked and a new one issues. Partners see the current status, always
-- **Retroactive migration** — Existing members can receive credentials in bulk. You don't start from zero users
+| Program focus | Business opportunity |
+| --- | --- |
+| Fund discounts from your own budget | Bring in partners that fund campaigns to reach relevant customers. |
+| Recognize status only within your brand | Let participating brands offer benefits to verified members. |
+| Give points a narrow redemption path | Build useful spending options across an approved merchant or reward network. |
+| Run isolated promotions | Develop repeatable campaigns with clear funding, redemption, and settlement. |
 
-## How It Works
+Merchant-funded campaigns, campaign management fees, or agreed commercial arrangements can be ways to build the business. These are program design opportunities; the model and terms are agreed with the participating partners.
 
-See [How it works](/products/loyalty/how-it-works) for the engine event → issue → present → verify flow.
+## Make membership valuable to partners
 
-## What Your Users Experience
+Loyalty credentials let a customer prove membership, tier, or achievement to a participating brand. The receiving partner chooses which issuers and status it accepts, then applies its own offer.
 
-Nothing changes at the point of earning. Your app, your UX, your branding. The credential issues silently in the background.
+This creates an opportunity to build partnerships around a relevant audience. For example, a merchant could offer a benefit to verified Gold members or fund a points campaign for that group. Your program connects the audience to the offer without giving the merchant direct access to your loyalty database.
 
-At a partner: the customer authenticates with their AIR Account (the same login they use with you). The customer approves the requested disclosure, and the benefit unlocks after successful verification. No code to enter, no linking flow to complete.
+## Give rewards places to be spent
 
-## What Compliance Will Ask
+A reward economy needs useful redemption. Customers should understand what they can earn, where they can spend it, and when campaign rewards expire.
 
-**Do you store our customer data?**
-Raw source documents remain with the issuer. Encrypted credential payloads may be stored in DStorage, while users control decryption and disclosure. Your schema determines the credential claims; for a tier check, include only the membership facts needed by partners.
+An [AIR Shop-style experience](/products/loyalty/use-cases#stable-loyalty-points-and-air-shop) can give rewards a clear destination. A partner could build a related experience around its own approved checkout or catalog. The program brings together earning rules, campaign funding, customer balances, and settlement for the merchant or partner.
 
-**What happens when a customer closes their account?**
-Revoke the credential so subsequent verification checks reject it once the revoked status is available. Handle deletion of source records, encrypted payloads, and previously disclosed data separately under your retention policy.
+Explore [AIR Shop](https://air3.shop), or read about [issuing](/products/loyalty/issuing-points) and [spending](/products/loyalty/spending-points) loyalty points.
 
-**Can partners see who our customers are?**
-Partners receive the claims requested by their Verification Program and approved by the user. Request only tier status and expiry if that is all you need; credential and account identifiers may still link the interaction to a customer.
+## Reuse campaign funding through breakage
 
-**Is this GDPR compliant?**
-AIR Kit supports data minimisation through limited claims, encrypted storage, and user-controlled disclosure. Tier and status can still be personal data. Assess your implementation and handle deletion separately from revocation; see the [Compliance FAQ](/solutions/compliance-faq).
+When expiring campaign rewards go unused, they produce **breakage**. Where the campaign supports recovery, eligible backing can return to its budget and fund future rewards.
 
-## Integration at a Glance
+That can make a campaign budget go further. It is separate from revenue earned through partner arrangements, and it does not make all unspent points profit. Keep outstanding reward commitments, redeemed value, expired rewards, and recovered funding distinct.
 
-| | |
-|---|---|
-| **What your team builds** | One API call in your existing milestone event handler |
-| **Engineering effort** | 1 backend engineer |
-| **Timeline to live** | 2–4 weeks including testing |
-| **Frontend changes** | None required |
-| **What partners build** | 3 lines of SDK code to verify |
+See [Breakage and budget recycling](/products/loyalty/loyalty-points#breakage-and-budget-recycling) for an example. Clear expiry and useful rewards remain central to the customer experience.
 
-## Next Steps
+## Measure the program as a business
 
-<CardGroup cols={2}>
-  <Card title="Compliance FAQ" icon="shield-check" href="/solutions/compliance-faq">
-    Full GDPR, PII, and data residency answers.
-  </Card>
-  <Card title="Partner Economics" icon="chart-bar" href="/solutions/partner-economics">
-    How the revenue model works for issuers and verifiers.
-  </Card>
-  <Card title="Loyalty for developers" icon="code" href="/products/loyalty/developers">
-    Schema, issuance and verification code, and example apps.
-  </Card>
-  <Card title="Talk to our team" icon="handshake" href="https://air3.com/partner-with-us">
-    Start a partnership conversation.
-  </Card>
-</CardGroup>
+Look beyond points issued. Measure customer activity and redemption, partner-funded campaigns, commercial revenue, reward costs, and operating costs. Compare those results to the behavior you want to encourage, such as repeat purchases or visits to participating merchants.
+
+A program becomes a sustainable business when the value it creates for customers and partners supports its costs. Stable points or breakage alone do not guarantee that outcome.
+
+[Talk to the AIR team](https://air3.com/partner-with-us) to explore the reward model, partner network, and integration that fit your business.

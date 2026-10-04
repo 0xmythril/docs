@@ -64,7 +64,8 @@
     "links": [
       {
         "label": "Partner with us",
-        "href": "https://air3.com/partner-with-us"
+        "href": "https://air3.com/partner-with-us",
+        "icon": "up-right-from-square"
       }
     ],
     "primary": {
@@ -80,7 +81,6 @@
     "tabs": [
       {
         "tab": "Home",
-        "icon": "home",
         "pages": [
           "index"
         ]
@@ -197,7 +197,13 @@
             "item": "AIR Identity",
             "icon": "id-card",
             "pages": [
-              "products/identity/integrating-using-ai",
+              {
+                "group": "AIR Identity",
+                "icon": "id-card",
+                "pages": [
+                  "products/identity/integrating-using-ai"
+                ]
+              },
               {
                 "group": "Overview",
                 "pages": [
@@ -205,6 +211,7 @@
                     "group": "Key concepts",
                     "expanded": true,
                     "pages": [
+                      "products/identity/what-is-air-identity",
                       "products/identity/credentials-flow",
                       "products/identity/schema-overview"
                     ]
@@ -246,10 +253,11 @@
                 ]
               },
               {
-                "group": "Beyond Identity",
+                "group": "Looking ahead",
                 "pages": [
                   "products/identity/beyond-identity"
-                ]
+                ],
+                "hidden": true
               }
             ]
           },
@@ -257,7 +265,13 @@
             "item": "AIR Agent",
             "icon": "robot",
             "pages": [
-              "products/agents/integrating-using-ai",
+              {
+                "group": "AIR Agent",
+                "icon": "robot",
+                "pages": [
+                  "products/agents/integrating-using-ai"
+                ]
+              },
               {
                 "group": "Overview",
                 "pages": [
@@ -265,11 +279,20 @@
                     "group": "Key concepts",
                     "expanded": true,
                     "pages": [
+                      "products/agents/what-is-air-agents",
                       "products/agents/how-it-works",
                       "products/agents/delegation-and-consent"
                     ]
                   },
-                  "products/agents/use-cases"
+                  {
+                    "group": "Use cases",
+                    "root": "products/agents/use-cases",
+                    "expanded": true,
+                    "pages": [
+                      "products/agents/agent-gating",
+                      "products/agents/offers-for-agents"
+                    ]
+                  }
                 ]
               },
               {
@@ -277,7 +300,7 @@
                 "pages": [
                   "products/agents/integration-options",
                   {
-                    "group": "Agent API integration",
+                    "group": "Using Agentic Identity",
                     "root": "products/agents/partner-agent-api",
                     "expanded": false,
                     "pages": [
@@ -287,11 +310,11 @@
                 ]
               },
               {
-                "group": "Beyond Agents",
+                "group": "Looking ahead",
                 "pages": [
-                  "products/agents/beyond-agents",
-                  "products/agents/offers-for-agents"
-                ]
+                  "products/agents/beyond-agents"
+                ],
+                "hidden": true
               }
             ]
           },
@@ -299,7 +322,13 @@
             "item": "AIR Money",
             "icon": "wallet",
             "pages": [
-              "products/money/integrating-using-ai",
+              {
+                "group": "AIR Money",
+                "icon": "wallet",
+                "pages": [
+                  "products/money/integrating-using-ai"
+                ]
+              },
               {
                 "group": "Overview",
                 "pages": [
@@ -307,6 +336,7 @@
                     "group": "Key concepts",
                     "expanded": true,
                     "pages": [
+                      "products/money/what-is-air-money",
                       "products/money/how-it-works",
                       "products/money/smart-account",
                       "products/money/supported-chains"
@@ -340,10 +370,11 @@
                 ]
               },
               {
-                "group": "Beyond Money",
+                "group": "Looking ahead",
                 "pages": [
                   "products/money/beyond-money"
-                ]
+                ],
+                "hidden": true
               }
             ]
           },
@@ -351,7 +382,13 @@
             "item": "AIR Loyalty",
             "icon": "gift",
             "pages": [
-              "products/loyalty/integrating-using-ai",
+              {
+                "group": "AIR Loyalty",
+                "icon": "gift",
+                "pages": [
+                  "products/loyalty/integrating-using-ai"
+                ]
+              },
               {
                 "group": "Overview",
                 "pages": [
@@ -359,7 +396,10 @@
                     "group": "Key concepts",
                     "expanded": true,
                     "pages": [
-                      "products/loyalty/how-it-works"
+                      "products/loyalty/what-is-air-loyalty",
+                      "products/loyalty/how-it-works",
+                      "products/loyalty/loyalty-points",
+                      "products/loyalty/business"
                     ]
                   },
                   "products/loyalty/use-cases"
@@ -369,21 +409,29 @@
                 "group": "Working with Loyalty",
                 "pages": [
                   {
-                    "group": "Issuing and verifying loyalty",
-                    "root": "products/loyalty/developers",
-                    "expanded": false,
+                    "group": "Loyalty Credentials",
+                    "expanded": true,
                     "pages": [
+                      "products/loyalty/developers",
                       "products/loyalty/loyalty-points-issuance"
+                    ]
+                  },
+                  {
+                    "group": "Loyalty Points",
+                    "expanded": true,
+                    "pages": [
+                      "products/loyalty/issuing-points",
+                      "products/loyalty/spending-points"
                     ]
                   }
                 ]
               },
               {
-                "group": "Beyond Loyalty",
+                "group": "Looking ahead",
                 "pages": [
-                  "products/loyalty/business",
                   "products/loyalty/beyond-loyalty"
-                ]
+                ],
+                "hidden": true
               }
             ]
           }

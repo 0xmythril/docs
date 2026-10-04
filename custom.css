@@ -14,6 +14,7 @@
   --font-weight-body-custom: 400;
   --air-text-primary: #181B1C;
   --air-text-secondary: #798b95;
+  --air-text-product: #087da3;
   --air-text-placeholder: #b8cad4;
   --air-text-disabled: #a8b4bb;
   --air-text-inverse: #ffffff;
@@ -327,6 +328,14 @@ mobile-nav-tabs-item:focus-visible {
   flex-shrink: 0;
 }
 
+/* Partner link: use the same compact trailing external-link icon. */
+header a[href="https://air3.com/partner-with-us"] > :is(svg, img) {
+  order: 1;
+  width: 12px !important;
+  height: 12px !important;
+  flex-shrink: 0;
+}
+
 /* ── Sidebar ─────────────────────────────────────────────────────────── */
 
 #sidebar {
@@ -378,6 +387,27 @@ mobile-nav-tabs-item:focus-visible {
   font-weight: 700 !important;
   background: transparent !important;
   padding-left: 0;
+}
+
+/* Product context uses a native top-level group above the first guide. */
+#navigation-items > div:first-child:has(> ul > li > a[href^="/products/"]) {
+  margin-top: 0;
+}
+
+#navigation-items > div:first-child:has(> ul > li > a[href^="/products/"]) .sidebar-group-header,
+#navigation-items > div:first-child:has(> ul > li > a[href^="/products/"]) .sidebar-title {
+  color: var(--air-text-product) !important;
+  font: 600 16px/24px var(--air-font-family-display) !important;
+}
+
+#navigation-items > div:first-child:has(> ul > li > a[href^="/products/"]) .sidebar-group-header svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: var(--air-text-product) !important;
+}
+
+#navigation-items > div:first-child:has(> ul > li > a[href^="/products/"]) .sidebar-group-header svg[style*="mask-image"] {
+  background-color: var(--air-text-product) !important;
 }
 
 #sidebar-content a,
