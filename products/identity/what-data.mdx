@@ -1,0 +1,26 @@
+---
+title: "What data do you need?"
+sidebarTitle: "What data do you need?"
+description: "Draft stub: decide which fields a verifier should request so the issuer schema and the verification program only move the minimum data."
+---
+
+<Note>
+  **Draft stub.** One-screen page Cham will fill in. Outline below is the intended shape, not final copy.
+</Note>
+
+One-line intent: before you build an issue/verify flow, decide the smallest set of fields the verifier actually needs — the schema and the verification program follow from that, not the other way around.
+
+## Outline for Cham to edit
+
+- **Start from the decision.** What is the verifier doing with the credential? (price tier, age gate, access check, eligibility). Name the decision in one line.
+- **List only the fields that decision needs.** One or two is normal. If you can answer the question with a boolean (`isGold`, `over18`), the schema can expose that instead of raw values.
+- **Pick selective-disclosure vs full disclosure.** SD-JWT lets the holder release a subset per request — call that out when the schema has fields the verifier should not see on every check.
+- **Match the issuer's source of truth.** The issuer can only sign what they already know. If the field isn't in the issuer's system, add it there before adding it to the schema.
+- **Call out PII and expiry.** Any field that is personal data needs a reason in the program, a short-enough expiry, and a revocation plan. Point at [Revoke credentials](/products/identity/revocation).
+
+## Links that already cover pieces of this
+
+- [Schema Overview](/products/identity/schema-overview) — how a schema defines fields.
+- [Schema Use Cases](/products/identity/schema-use-cases) — concrete examples per vertical.
+- [Verifying Credentials](/products/identity/verify) — how a verification program requests fields.
+- [Selective Disclosure](/products/identity/selective-disclosure) — releasing a subset.

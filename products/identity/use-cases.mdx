@@ -1,0 +1,35 @@
+---
+title: "Use cases"
+sidebarTitle: "Use cases"
+description: "Draft stub: short recipes for common ways partners put an issuer online — issuing from an existing database, and issuing a KYC credential from an existing KYC provider."
+---
+
+<Note>
+  **Draft stub.** Two short recipes Cham will finish. No KYC integration is implied — the KYC recipe is about re-signing an existing KYC result as a credential, not about running KYC inside AIR.
+</Note>
+
+One-line intent: patterns, not full tutorials. Each recipe is "which fields, which event, which endpoint" — the code already lives in the pages linked at the bottom.
+
+## Issue from an existing database
+
+- **When to use.** You already hold the data the credential will carry (membership tier, enrollment date, program eligibility).
+- **Outline.**
+  - Pick the field(s) a verifier needs. See [What data do you need?](/products/identity/what-data).
+  - Create the schema in the Dashboard. See [Schema Creation](/products/identity/schema-creation).
+  - Add a hook on the write path that already updates the record — on tier change, on account creation, on milestone — and call the issuer backend from that hook.
+  - Issue through the on-demand path so the user does not need to be in session. See [Issuing Credentials](/products/identity/issuing-credentials) and [Host an issuer backend](/products/identity/backend-hosting).
+  - Revoke-and-reissue on changes; expire old credentials. See [Revoke credentials](/products/identity/revocation).
+
+## Issue a KYC credential from Persona or Sumsub
+
+- **When to use.** You already run KYC on the user through Persona, Sumsub, or a similar provider, and you want the result to travel with the user as a credential.
+- **What this is not.** AIR does not run KYC inside this flow. The provider stays the source of truth. The credential is a signed statement that *your* account passed a check at a given level, on a given date.
+- **Outline.**
+  - Agree with legal/compliance what claims the credential should carry — usually a level + a date, not the underlying PII. Point back at [What data do you need?](/products/identity/what-data).
+  - Subscribe to the KYC provider's webhook for the "approved" event.
+  - In the webhook handler, look up the AIR Account for the user, build the credential, and issue through the on-demand path. See [Issuing Credentials](/products/identity/issuing-credentials).
+  - Revoke on expiry or when the provider re-evaluates.
+
+## Related
+
+- [AIR + Veriff powered by zkMe](/solutions/kyc) — the ready-made KYC integration AIR offers for partners who have not deployed their own.

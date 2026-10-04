@@ -200,66 +200,31 @@
               {
                 "group": "Overview",
                 "pages": [
+                  "products/identity/index",
                   "products/identity/integrating-using-ai",
-                  "products/identity/credentials-flow",
-                  "products/identity/integration-workflow",
-                  "products/identity/credential-formats"
+                  "products/identity/credentials-flow"
                 ]
               },
               {
-                "group": "Schema design",
+                "group": "Using credentials",
                 "pages": [
+                  "products/identity/credential-formats",
                   "products/identity/schema-overview",
-                  "products/identity/schema-use-cases",
-                  "products/identity/schema-creation",
-                  "products/identity/schema-management"
-                ]
-              },
-              {
-                "group": "Issue and verify",
-                "pages": [
                   "products/identity/issuing-credentials",
+                  "products/identity/schema-creation",
                   "products/identity/backend-hosting",
                   "products/identity/revocation",
+                  "products/identity/schema-management",
                   "products/identity/verify",
+                  "products/identity/what-data",
                   "products/identity/verify-sd-jwt",
-                  "products/identity/selective-disclosure"
-                ]
-              },
-              {
-                "group": "Advanced",
-                "pages": [
                   "products/identity/iden3-credentials"
                 ]
-              }
-            ]
-          },
-          {
-            "item": "AIR Agents",
-            "icon": "robot",
-            "groups": [
-              {
-                "group": "Overview",
-                "pages": [
-                  "products/agents/integrating-using-ai",
-                  "products/agents/index",
-                  "products/agents/partners",
-                  "products/agents/how-it-works"
-                ]
               },
               {
-                "group": "Commerce and consent",
+                "group": "Use cases",
                 "pages": [
-                  "products/agents/delegation-and-consent",
-                  "products/agents/use-cases",
-                  "products/agents/offers-for-agents"
-                ]
-              },
-              {
-                "group": "Integration",
-                "pages": [
-                  "products/agents/integration-options",
-                  "products/agents/partner-agent-api"
+                  "products/identity/use-cases"
                 ]
               }
             ]
@@ -271,31 +236,22 @@
               {
                 "group": "Overview",
                 "pages": [
+                  "products/money/index",
                   "products/money/integrating-using-ai",
-                  "products/money/index"
+                  "products/money/how-it-works"
                 ]
               },
               {
-                "group": "Accounts & wallet",
+                "group": "Guides",
                 "pages": [
                   "products/money/smart-account",
                   "products/money/provider-functions",
                   "products/money/wagmi",
                   "products/money/supported-chains",
-                  "products/money/paymaster"
-                ]
-              },
-              {
-                "group": "Advanced",
-                "pages": [
+                  "products/money/paymaster",
                   "products/money/builtin-ui",
                   "products/money/session-keys",
-                  "products/money/advanced-functions"
-                ]
-              },
-              {
-                "group": "Recipes",
-                "pages": [
+                  "products/money/advanced-functions",
                   "products/money/wagmi-integration"
                 ]
               }
@@ -308,16 +264,52 @@
               {
                 "group": "Overview",
                 "pages": [
-                  "products/loyalty/integrating-using-ai",
                   "products/loyalty/index",
-                  "products/loyalty/business",
-                  "products/loyalty/developers"
+                  "products/loyalty/integrating-using-ai",
+                  "products/loyalty/how-it-works"
                 ]
               },
               {
-                "group": "Build",
+                "group": "Guides",
                 "pages": [
+                  "products/loyalty/developers",
                   "products/loyalty/loyalty-points-issuance"
+                ]
+              },
+              {
+                "group": "Use cases",
+                "pages": [
+                  "products/loyalty/use-cases"
+                ]
+              }
+            ]
+          },
+          {
+            "item": "AIR Agents",
+            "icon": "robot",
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": [
+                  "products/agents/index",
+                  "products/agents/integrating-using-ai",
+                  "products/agents/how-it-works"
+                ]
+              },
+              {
+                "group": "Guides",
+                "pages": [
+                  "products/agents/integration-options",
+                  "products/agents/partner-agent-api",
+                  "products/agents/delegation-and-consent",
+                  "api-reference/agents/introduction"
+                ]
+              },
+              {
+                "group": "Use cases",
+                "pages": [
+                  "products/agents/use-cases",
+                  "products/agents/offers-for-agents"
                 ]
               }
             ]

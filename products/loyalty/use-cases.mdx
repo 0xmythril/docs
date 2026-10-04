@@ -1,0 +1,38 @@
+---
+title: "Use cases"
+sidebarTitle: "Use cases"
+description: "Draft stub: one page listing the loyalty patterns the landing already names — tier credentials, milestone badges, cross-brand benefits, time-boxed status, airline-Gold-at-a-café."
+---
+
+<Note>
+  **Draft stub.** One page covering five patterns. Keep each pattern to a few lines — if a pattern deserves a full tutorial, it belongs under [Loyalty developer walkthrough](/products/loyalty/developers) or [End-to-end loyalty credential flow](/products/loyalty/loyalty-points-issuance), not here.
+</Note>
+
+One-line intent: the same loyalty credential plumbing (schema, on-demand issuance, program-driven verification) covers all of these — the differences are in the schema fields and when you revoke.
+
+## Patterns
+
+### Tier credentials
+
+Issue a `tier` credential when the loyalty engine records a tier change. Revoke the previous tier and reissue so the current status is the only one that verifies.
+
+### Milestone badges
+
+Issue a one-time credential when a customer crosses a threshold (points, purchases, visits). Skip re-issuance if one already exists for that milestone.
+
+### Cross-brand benefits
+
+A partner brand verifies your tier credential and grants the benefit, without an API integration between the two of you. The partner configures its own verification program; your schema stays the same.
+
+### Time-boxed status
+
+Set an `expirationDate` on the credential for seasonal or campaign-based access. Verification fails after the expiry; no revocation call needed.
+
+### Airline Gold at a café
+
+A customer presents airline Gold status at a partner café. The café never sees the membership number — the verification program requests only the tier. Live example: the [member discount demo](https://air-bd-v2.netlify.app/try-it-live/member-discount).
+
+## Where to look next
+
+- [Loyalty developer walkthrough](/products/loyalty/developers) — recommended schema and verification code.
+- [End-to-end loyalty credential flow](/products/loyalty/loyalty-points-issuance) — the full recipe.

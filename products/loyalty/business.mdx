@@ -1,12 +1,10 @@
 ---
-title: "Loyalty & Rewards"
-sidebarTitle: "For businesses"
+title: "Loyalty business case"
+sidebarTitle: "Business case"
 description: "Issue portable loyalty tier credentials that travel with your customers across partner brands — no bilateral API agreements required."
 ---
 
 Loyalty programs today are siloed — a user's Gold status with one brand is invisible to another. AIR Kit lets you issue **verifiable loyalty credentials** that users carry in their AIR Account and present anywhere in the ecosystem, across brands, apps, and chains.
-
-This page covers the business case. For the schema, code, and example apps, see [Loyalty for developers](/products/loyalty/developers).
 
 ## The Problem
 
@@ -24,20 +22,7 @@ The result: $100B in unredeemed loyalty points sitting in silos. Customers who d
 
 ## How It Works
 
-<Steps>
-  <Step title="Your loyalty engine fires an event">
-    A customer reaches Gold. Your existing system triggers the same milestone event it always has — a database write, a webhook, an email. Nothing changes here.
-  </Step>
-  <Step title="AIR Kit issues a loyalty credential">
-    Your backend makes one API call. A verifiable "Gold Member" credential lands in that customer's AIR Account. They don't need to open an app or take any action.
-  </Step>
-  <Step title="The customer presents the credential at a partner">
-    At check-in, checkout, or app login at any partner in the ecosystem, the customer's credential is readable. No account linking. No API call to your platform.
-  </Step>
-  <Step title="The partner verifies — and gets only what they need">
-    The partner's system calls one SDK method. A successful result includes a Verifiable Presentation. Configure the program to request only the tier information needed for the benefit, with the user's approval.
-  </Step>
-</Steps>
+See [How it works](/products/loyalty/how-it-works) for the engine event → issue → present → verify flow.
 
 ## What Your Users Experience
 

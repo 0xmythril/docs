@@ -1,0 +1,25 @@
+---
+title: "How it works"
+sidebarTitle: "How it works"
+description: "Draft stub: how an AIR Money account comes together — sign in, smart account, hold / send / swap, sponsored gas, and what the partner never custodies."
+---
+
+<Note>
+  **Draft stub.** One-screen page Cham will edit. The outline below names the four moving parts a partner needs to understand before writing any wallet code; the details already live on the linked pages — do not copy them here.
+</Note>
+
+One-line intent: AIR Money gives a signed-in user a smart account they didn't ask for and don't manage, and lets the partner app move value through it without ever touching keys or funds.
+
+## Outline for Cham to edit
+
+- **Sign in.** The account belongs to the signed-in AIR Account. No separate wallet connect. See [User login](/get-started/authentication/login).
+- **Smart account.** First transaction deploys a chain-specific smart account on the user's behalf. Deployment gas is sponsored. See [Smart accounts](/products/money/smart-account).
+- **Hold / send / swap.** Standard EIP-1193 provider for signing and sending, plus hosted screens for send/receive/swap/history when the partner doesn't want to build them. See [Wallet functions](/products/money/provider-functions) and [Built-in UI](/products/money/builtin-ui).
+- **No seed phrase.** The user never sees or stores a mnemonic. Recovery runs through the AIR Account.
+- **Sponsored gas.** The partner configures a paymaster policy (allowlists, caps, per-user limits) and users pay no gas inside those rules. See [Paymaster](/products/money/paymaster).
+- **What the partner does not custody.** Partner backends do not hold private keys or user funds. The partner app signs through the user's smart account via the provider; AIR does not sign on the partner's behalf and does not take custody of balances.
+
+## Related
+
+- [Supported chains](/products/money/supported-chains) — which networks a partner can turn on.
+- [Session keys](/products/money/session-keys) — scoped permission so the user signs once per flow instead of per transaction.
