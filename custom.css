@@ -450,7 +450,7 @@ header a[href="https://air3.com/partner-with-us"] > :is(svg, img) {
   background: var(--air-container-primary) !important;
 }
 
-/* Keep Mintlify's depth-based left padding identical for links and toggles. */
+
 #sidebar-content li > button[aria-expanded] {
   align-items: center !important;
   justify-content: space-between;
