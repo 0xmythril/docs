@@ -3,7 +3,7 @@ title: "Common Issues"
 description: "Troubleshoot the most frequent AIR Kit integration issues — Partner JWT signing and JWKS retrieval, CORS, and rate limiting."
 ---
 
-Guidance for the issues most AIR Kit integrations hit first. For a lookup of specific HTTP statuses or SDK error names, see [Error codes](/help/error-codes). For SDK-specific problems, see [Web](/help/sdk-web) and [Flutter](/help/sdk-flutter). For issuance, verification, and schema problems, see [Identity & Credential](/help/identity-credential).
+These are the issues most AIR Kit integrations run into first. To look up a specific HTTP status or SDK error name see [Error codes](/help/error-codes). For platform-specific problems, see [Web](/help/sdk-web) and [Flutter](/help/sdk-flutter). For issuance, verification, and schema problems, see [Identity & Credential](/help/identity-credential).
 
 ## JWT and JWKS errors
 
@@ -28,7 +28,7 @@ curl https://your-domain/api/.well-known/jwks
 ```
 
 - `air-examples` ships `/api/.well-known/jwks`; the plug-and-play template ships `/jwks.json`. Register whichever your app actually serves.
-- Ensure no firewall or IP allowlist blocks AIR Kit's servers.
+- Ensure no firewall or IP allowlist blocks AIR servers.
 - Full setup procedure: [JWKS endpoint setup](/get-started/authentication/jwks-endpoint).
 
 ### "kid not found"
